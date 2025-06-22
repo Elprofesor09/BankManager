@@ -1,25 +1,51 @@
-#  BankManager – Gestionnaire de comptes bancaires
+# BankManager – Gestionnaire de Comptes Bancaires
 
-Ce projet Java simule une structure simple de comptes bancaires avec héritage entre classes.
+Ce projet Java simule une structure simple de gestion de comptes bancaires à l’aide de l’héritage en programmation orientée objet (POO). Il illustre la création de différents types de comptes avec des comportements spécifiques.
 
-##  Structure
 
-- `BankAccount` : classe mère avec les attributs `account` et `balance`
-- `CheckingAccount` : hérite de `BankAccount` et ajoute `limit`
-- `SavingsAccount` : hérite de `BankAccount` et ajoute `interestRate`
-- `COD` : hérite de `BankAccount` et ajoute `duration`
+## Structure du projet
 
-##  Exécution
+- **`BankAccount`** : classe mère contenant les attributs communs :
+    - `account` (numéro ou nom de compte)
+    - `balance` (solde)
 
-- Crée et initialise des instances de chaque classe
-- Affiche les données de chaque type de compte
+- **`CheckingAccount`** *(compte courant)* :
+    - Hérite de `BankAccount`
+    - Ajoute un attribut `limit` (découvert autorisé)
 
-##  Objectif pédagogique
+- **`SavingsAccount`** *(compte épargne)* :
+    - Hérite de `BankAccount`
+    - Ajoute un attribut `interestRate` (taux d’intérêt)
 
-- Comprendre l’héritage en Java
-- Manipuler des objets et leurs attributs
-- Organiser un projet POO
+- **`COD`** *(Certificat de dépôt)* :
+    - Hérite de `BankAccount`
+    - Ajoute un attribut `duration` (durée du placement)
 
-##  Réalisé par
 
-- **Nom :** Toure youssouf
+## Exécution
+
+- Le fichier `Main.java` instancie différents types de comptes :
+    - Création de comptes avec leurs données spécifiques
+    - Affichage des détails de chaque compte
+- Le projet fonctionne en **console Java**
+
+
+## Objectifs
+
+- Comprendre les **concepts d’héritage** et de **polymorphisme**
+- Savoir structurer un projet Java orienté objet
+- Manipuler des objets dérivés et leurs attributs propres
+- Travailler avec une hiérarchie de classes
+
+
+## Exemple de sortie
+
+```text
+Compte : 001 - Solde : 150000.0
+Type : Compte Courant - Découvert autorisé : 50000.0
+
+Compte : 002 - Solde : 200000.0
+Type : Compte Épargne - Taux d'intérêt : 3.5%
+
+Compte : 003 - Solde : 1000000.0
+Type : COD - Durée : 12 mois
